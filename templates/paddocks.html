@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Paddocks</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Paddock Name</th>
+            <th>Area (ha)</th>
+            <th>DM/ha</th>
+            <th>Mob in Paddock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for paddock in paddocks %}
+        <tr style="background-color: {{ paddock.highlight }}">
+            <td>{{ paddock.name }}</td>
+            <td>{{ paddock.area }}</td>
+            <td>{{ paddock.dm_per_ha }}</td>
+            <td>{{ paddock.mob_name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

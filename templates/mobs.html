@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Mobs List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mob Name</th>
+            <th>Paddock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mob in mobs %}
+        <tr>
+            <td>{{ mob.mob_name }}</td>
+            <td>{{ mob.paddock_name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
