@@ -2,9 +2,8 @@ import mysql.connector
 
 def get_db_connection():
     connection = mysql.connector.connect(
-        host="localhost",        # Change this for PythonAnywhere MySQL host
-        user="your_username",
-        password="your_password",
-        database="fms"
+        host="javeriakashan.mysql.pythonanywhere-services.com",  # PythonAnywhere MySQL host
+        user="javeriakashan",  # Your PythonAnywhere username
+        database="javeriakashan$fms"  # Full database name
     )
     return connection
