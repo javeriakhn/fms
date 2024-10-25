@@ -1,152 +1,87 @@
-/* Reset some default browser styles */
-* {
+
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background: url('../static/images.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
+    color: white;
 }
 
-/* Navbar styling */
+/* Navbar */
 .navbar {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
 }
 
 .navbar ul {
     list-style-type: none;
-    display: flex;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 10px 20px;
 }
 
 .navbar ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
 .navbar ul li a:hover {
-    color: #00c6ff; /* Bright blue for hover */
+    color: #ffcc00;
 }
 
-/* Welcome section styling */
+/* Welcome Section */
 .welcome-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    position: relative;
-    padding-top: 60px; /* To ensure space for navbar */
-}
-
-.welcome-content {
-    background: rgba(255, 255, 255, 0.1); /* Slight transparent white */
-    padding: 40px 60px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .welcome-content h1 {
-    font-size: 3.5em;
-    color: #fff;
+    font-size: 3rem;
     margin-bottom: 20px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .welcome-content p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #ddd;
 }
 
-/* Button Styling */
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
 .btn-primary, .btn-secondary {
-    padding: 15px 30px;
+    background-color: #007bff;
     border: none;
-    border-radius: 50px;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin: 10px;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.btn-primary {
-    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Blue gradient */
+    padding: 15px 30px;
+    margin-right: 20px;
     color: white;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(45deg, #0072ff, #00c6ff);
-    transform: scale(1.05);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .btn-secondary {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Red-pink gradient */
-    color: white;
+    background-color: #6c757d;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #0056b3;
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
-    transform: scale(1.05);
-}
-
-/* Smooth button hover transition */
-.btn-primary:focus, .btn-secondary:focus {
-    outline: none;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .welcome-content h1 {
-        font-size: 2.5em;
-    }
-
-    .welcome-content p {
-        font-size: 1.2em;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        font-size: 1.1em;
-    }
+    background-color: #5a6268;
 }
