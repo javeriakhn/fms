@@ -1,5 +1,29 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Welcome to the Farm Management System</h2>
-<p>This application helps you manage stock and pasture growth on your farm.</p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('mobs') }}">Mobs</a></li>
+            <li><a href="{{ url_for('paddocks') }}">Paddocks</a></li>
+            <li><a href="{{ url_for('home') }}">FMS</a></li>
+        </ul>
+    </nav>
+
+    <div class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to FMS</h1>
+            <p>Today is: <span id="current-date">{{ current_date }}</span></p>
+            <a href="{{ url_for('mobs') }}"><button class="btn-primary">View Mobs</button></a>
+            <a href="{{ url_for('paddocks') }}"><button class="btn-secondary">View Paddocks</button></a>
+        </div>
+    </div>
+</body>
+</html>
+
